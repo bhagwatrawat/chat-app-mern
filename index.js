@@ -28,7 +28,6 @@ server.listen(port, () => {
 global.onlineUsers=new Map();
 
 io.on("connection", socket => {
-    console.log('connection is made')
     socket.on('add-user',(userId)=>{
         onlineUsers.set(userId,socket.id);
     })
